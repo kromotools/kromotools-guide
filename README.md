@@ -4,7 +4,7 @@
 
 **The documentation hub for Kromo Tools. Categories, a searchable tool directory, privacy summary, limits and FAQ in one fast page.**
 
-[**Open the Guide**](https://YOUR-USERNAME.github.io/kromotools-guide/) · [Website](https://www.kromotools.net/) · [All Tools](https://www.kromotools.net/p/all-tools.html) · [Blog](https://www.kromotools.net/p/blog.html) · [Request a Tool](https://www.kromotools.net/p/request-tool.html) · [Report a Bug](https://www.kromotools.net/p/report-bug.html)
+[**Open the Guide**](https://kromotools.github.io/kromotools-guide/) · [Website](https://www.kromotools.net/) · [All Tools](https://www.kromotools.net/p/all-tools.html) · [Blog](https://www.kromotools.net/p/blog.html) · [Request a Tool](https://www.kromotools.net/p/request-tool.html) · [Report a Bug](https://www.kromotools.net/p/report-bug.html)
 
 </div>
 
@@ -36,17 +36,17 @@ This repository hosts the documentation page for [Kromo Tools](https://www.kromo
 
 The guide answers the questions people ask before using a tool: what it does, whether it runs in the browser, what happens to the text you enter, what the limits are, and where to report a problem. It is a single static page, so it loads quickly and works on any device.
 
-**Live guide:** https://YOUR-USERNAME.github.io/kromotools-guide/
+**Live guide:** https://kromotools.github.io/kromotools-guide/
 
 ## Quick Links
 
 | I want to... | Go to |
 |---|---|
-| Find a tool fast | [Tool directory](https://YOUR-USERNAME.github.io/kromotools-guide/#directory) |
-| Understand how my data is handled | [Privacy and data](https://YOUR-USERNAME.github.io/kromotools-guide/#privacy) |
-| Know how accurate results are | [Limits and accuracy](https://YOUR-USERNAME.github.io/kromotools-guide/#limits) |
-| Fix a problem | [Troubleshooting](https://YOUR-USERNAME.github.io/kromotools-guide/#trouble) |
-| Get answers quickly | [FAQ](https://YOUR-USERNAME.github.io/kromotools-guide/#faq) |
+| Find a tool fast | [Tool directory](https://kromotools.github.io/kromotools-guide/#directory) |
+| Understand how my data is handled | [Privacy and data](https://kromotools.github.io/kromotools-guide/#privacy) |
+| Know how accurate results are | [Limits and accuracy](https://kromotools.github.io/kromotools-guide/#limits) |
+| Fix a problem | [Troubleshooting](https://kromotools.github.io/kromotools-guide/#trouble) |
+| Get answers quickly | [FAQ](https://kromotools.github.io/kromotools-guide/#faq) |
 
 ## What Is Inside the Guide
 
