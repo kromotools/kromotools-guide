@@ -4,17 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Kromo Tools Guide – Categories, Privacy, Limits & FAQ</title>
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website"><meta property="og:title" content="Kromo Tools Guide – Categories, Privacy, Limits &amp; FAQ"><meta property="og:url" content="https://kromotools.github.io/kromotools-guide/">
 <meta name="description" content="The official guide to Kromo Tools: what each category does, which tools run in your browser, how AI tools handle your text, usage limits, accuracy, and FAQs.">
 <link rel="canonical" href="https://kromotools.github.io/kromotools-guide/">
 <style>
 :root{--bg:#fff;--surface:#f5f7ff;--ink:#12142b;--muted:#585c78;--line:#dfe3f5;--brand:#4353ff;--brand-ink:#fff;--warn:#fff6e0;--warn-line:#e8c66a;color-scheme:light}
-@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0e1020;--surface:#171a31;--ink:#eceefb;--muted:#a3a8c8;--line:#2a2e52;--brand:#8b96ff;--brand-ink:#0e1020;--warn:#2a2412;--warn-line:#6d5a1c;color-scheme:dark}}
-:root[data-theme=dark]{--bg:#0e1020;--surface:#171a31;--ink:#eceefb;--muted:#a3a8c8;--line:#2a2e52;--brand:#8b96ff;--brand-ink:#0e1020;--warn:#2a2412;--warn-line:#6d5a1c;color-scheme:dark}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0e1020;--surface:#171a31;--ink:#eceefb;--muted:#a3a8c8;--line:#2a2e52;--brand:#7f8fff;--brand-ink:#0e1020;--warn:#2a2412;--warn-line:#6d5a1c;color-scheme:dark}}
+:root[data-theme=dark]{--bg:#0e1020;--surface:#171a31;--ink:#eceefb;--muted:#a3a8c8;--line:#2a2e52;--brand:#7f8fff;--brand-ink:#0e1020;--warn:#2a2412;--warn-line:#6d5a1c;color-scheme:dark}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding-top:env(safe-area-inset-top,0px)}
 a{color:var(--brand)}a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
 header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:16px;padding:12px 20px}
 header.top b{font-size:1.05rem}header.top nav{margin-left:auto;display:flex;gap:16px;font-size:.92rem}header.top nav a{color:var(--muted);text-decoration:none}
+header.top a.home{font-size:.9rem;color:var(--brand);text-decoration:none;font-weight:600;white-space:nowrap}
 button.theme{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;padding:6px 10px;cursor:pointer}
 .wrap{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:240px minmax(0,1fr);gap:40px;padding:0 20px}
 aside{position:sticky;top:70px;align-self:start;max-height:calc(100vh - 90px);overflow:auto;padding:28px 0;font-size:.92rem}
@@ -41,12 +44,14 @@ table{border-collapse:collapse;width:100%;font-size:.94rem}th,td{border:1px soli
 details{border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:8px 0}summary{cursor:pointer;font-weight:600}
 code{background:var(--surface);padding:2px 6px;border-radius:5px;font-size:.9em}
 footer{border-top:1px solid var(--line);padding:28px 20px;color:var(--muted);font-size:.9rem;text-align:center}
-@media(max-width:860px){.wrap{grid-template-columns:1fr}aside{display:none}header.top nav{display:none}}
+@media(max-width:860px){.wrap{grid-template-columns:1fr}aside{display:none}header.top nav{display:none}header.top{gap:10px;padding:10px 14px}header.top a.home{margin-left:auto}}
+@media(max-width:420px){header.top a.home{display:none}header.top button.theme{margin-left:auto}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is Kromo Tools really free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. All tools are free to use with no account. Advertising and optional support pay for hosting."}}, {"@type": "Question", "name": "Can I trust the health calculators?", "acceptedAnswer": {"@type": "Answer", "text": "Use them for general guidance only. They cannot diagnose anything and do not know your medical history."}}, {"@type": "Question", "name": "Do AI tools keep my text?", "acceptedAnswer": {"@type": "Answer", "text": "We do not store it, but our backend and the AI provider process it under their own policies. Do not enter anything private."}}, {"@type": "Question", "name": "Can I get a tool built for me?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, through the Custom Tool Development page. You get a quote before anything is built."}}, {"@type": "Question", "name": "Is this guide official?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It is published by the Kromo Tools team and hosted on GitHub Pages."}}]}</script>
 </head>
 <body>
-<header class="top"><b>Kromo Tools Guide</b><nav><a href="#directory">Tool directory</a><a href="#privacy">Privacy</a><a href="#faq">FAQ</a></nav><button class="theme" id="theme" aria-label="Toggle dark mode">Theme</button></header>
+<header class="top"><b>Kromo Tools Guide</b><nav><a href="#directory">Tool directory</a><a href="#privacy">Privacy</a><a href="#faq">FAQ</a></nav><a class="home" href="https://www.kromotools.net/">kromotools.net ↗</a><button class="theme" id="theme" aria-label="Switch between light and dark mode">Light / Dark</button></header>
 <div class="wrap">
 <aside aria-label="Contents" id="toc">
 <a href="#overview">Overview</a><a href="#start">Quick start</a><a href="#categories">Categories</a><a href="#directory">Tool directory</a><a href="#how">How tools work</a><a href="#privacy">Privacy &amp; data</a><a href="#limits">Limits &amp; accuracy</a><a href="#trouble">Troubleshooting</a><a href="#business">Advertising &amp; custom tools</a><a href="#policies">Policies</a><a href="#contact">Contact &amp; support</a><a href="#faq">FAQ</a>
@@ -64,7 +69,7 @@ footer{border-top:1px solid var(--line);padding:28px 20px;color:var(--muted);fon
 <h2 id="start">Quick start</h2>
 <ol>
 <li>Open the <a href="https://www.kromotools.net/p/all-tools.html">All Tools</a> page and type a keyword such as <code>pdf</code>, <code>bmi</code> or <code>age</code>, or use the category buttons.</li>
-<li>Open the tool page. Each one explains how it works and which formula it is based on.</li>
+<li>Open the tool page and read the short guidance on how to use it.</li>
 <li>Enter your values or choose a file. Do not enter passwords, bank details or medical records.</li>
 <li>Read the result and treat it as an estimate. For anything important, check it independently.</li>
 <li>If a result looks wrong, use <a href="https://www.kromotools.net/p/report-bug.html">Report a Bug</a>. If a tool is missing, use <a href="https://www.kromotools.net/p/request-tool.html">Request a Tool</a>.</li>
@@ -88,24 +93,25 @@ footer{border-top:1px solid var(--line);padding:28px 20px;color:var(--muted);fon
 <div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
 <div id="count" aria-live="polite"></div>
 <ul id="grid"></ul>
+<noscript><p>The searchable list needs JavaScript. You can browse every tool on the <a href="https://www.kromotools.net/p/all-tools.html">All Tools page</a>.</p></noscript>
 
 <h2 id="how">How the tools work</h2>
 <h3>Browser-based tools</h3>
-<p>Calculators, converters and most text, image and PDF tools run on your own device. According to the site, the content is not sent to its servers, and it disappears when you close or refresh the page.</p>
+<p>Calculators, converters and most text, image and PDF tools run on your own device, so what you type or choose is processed in your browser and is not sent to our servers. It disappears when you close or refresh the page. A few tools need a network request to work, for example tools that look up an IP address, a domain or a web page, or that translate text. The tool page and our <a href="https://www.kromotools.net/p/privacy-policy.html">Privacy Policy</a> describe what each one sends.</p>
 <h3>AI-powered tools</h3>
-<p>Tools such as the AI Text Humanizer, AI Chatbot Builder or Grammar Checker may use an AI service. The site says your text goes to its Vercel-hosted backend and on to an outside AI provider, and that it does not store the text itself. Vercel and the provider handle it under their own policies.</p>
+<p>Tools such as the AI Text Humanizer, AI Chatbot Builder or Grammar Checker may use an AI service. Your text goes to our Vercel-hosted backend and on to an outside AI provider. We do not store the text ourselves, but Vercel and the provider handle it under their own policies.</p>
 <h3>Usage limits</h3>
 <p>Some AI tools are rate-limited. To do this, the backend reads your IP address and keeps a short-lived counter with Upstash. The terms forbid bypassing limits, for example by rotating IP addresses or using automated requests.</p>
 
 <h2 id="privacy">Privacy and data summary</h2>
 <div class="scroll"><table>
-<tr><th>Question</th><th>Answer from the site's policies</th></tr>
+<tr><th>Question</th><th>Answer (see our Privacy Policy for the full text)</th></tr>
 <tr><td>Account needed?</td><td>No.</td></tr>
-<tr><td>Are inputs stored?</td><td>The site says no. AI tool text passes through third parties.</td></tr>
+<tr><td>Are inputs stored?</td><td>We do not store what you enter in the tools. AI tool text passes through third-party services.</td></tr>
 <tr><td>Data collected automatically</td><td>IP address, browser, device, pages visited, time on page, referrer.</td></tr>
 <tr><td>Third parties</td><td>Blogger (Google), Google Analytics, Google AdSense, Vercel, Upstash, FormSubmit for contact forms, AI providers.</td></tr>
 <tr><td>Cookies</td><td>Platform, analytics and advertising cookies. Your banner choice is kept in browser storage.</td></tr>
-<tr><td>Sold?</td><td>Not sold for money. Advertising cookies may count as "sharing" under some laws, and you can opt out in Google Ads Settings.</td></tr>
+<tr><td>Is my data sold?</td><td>We do not sell your personal data for money. Advertising cookies from Google may count as "sharing" under some laws, and you can opt out in Google Ads Settings.</td></tr>
 <tr><td>Children</td><td>Not directed at under-13s.</td></tr>
 <tr><td>Your rights</td><td>Access, correction, deletion and objection under GDPR or CCPA. Email support@kromotools.net.</td></tr>
 </table></div>
@@ -114,7 +120,7 @@ footer{border-top:1px solid var(--line);padding:28px 20px;color:var(--muted);fon
 <h2 id="limits">Limits and accuracy</h2>
 <ul>
 <li><strong>Estimates only.</strong> Health, nutrition and finance tools give general estimates. They are not medical, legal, tax or financial advice.</li>
-<li><strong>How formulas are checked.</strong> The site says it uses published sources such as WHO guidance, tests against manual calculations, and re-checks each tool every 90 days.</li>
+<li><strong>How formulas are checked.</strong> We build tools from published sources such as WHO guidance, test them against manual calculations, and re-check each tool every 90 days. See our <a href="https://www.kromotools.net/p/editorial-policy.html">Editorial Policy</a>.</li>
 <li><strong>AI output.</strong> It can be wrong, outdated or similar to other users' results. Edit before use and follow school, employer or platform rules about AI-assisted work.</li>
 <li><strong>Rounding and standards.</strong> Different countries and formulas can give slightly different answers.</li>
 <li><strong>Availability.</strong> Tools are "as is" and may change, pause or be removed.</li>
@@ -127,15 +133,16 @@ footer{border-top:1px solid var(--line);padding:28px 20px;color:var(--muted);fon
 <details><summary>A large PDF or image is slow</summary><p>Browser tools use your device's memory. Close other tabs, or split the file first.</p></details>
 
 <h2 id="business">Advertising and custom tools</h2>
+<p>Details and current rates are on the <a href="https://www.kromotools.net/p/advertise-with-us.html">Advertise With Us</a> and <a href="https://www.kromotools.net/p/custom-tool-development.html">Custom Tool Development</a> pages. The table is a summary; prices can change, so confirm by email before ordering.</p>
 <div class="scroll"><table>
-<tr><th>Offer</th><th>Starting price (as listed)</th><th>Notes</th></tr>
+<tr><th>Offer</th><th>Starting price</th><th>Notes</th></tr>
 <tr><td>Starter banner</td><td>$49 / month</td><td>Sidebar banner on up to 3 tool pages</td></tr>
 <tr><td>Growth</td><td>$149 / month</td><td>Header and sidebar banners, 1 sponsored listing</td></tr>
 <tr><td>Sponsored article</td><td>$199 one-time</td><td>Labelled as sponsored, 2 revision rounds</td></tr>
 <tr><td>Custom standard tool</td><td>from $29 one-time</td><td>You own the files; 30 days of fixes</td></tr>
-<tr><td>Custom API-powered tool</td><td>from $49 + API</td><td>Hosted plan from $49/month, or bring your own API key</td></tr>
+<tr><td>Custom API-powered tool</td><td>from $49 + API usage costs</td><td>Optional hosting from $49/month, or use your own API key</td></tr>
 </table></div>
-<p>Ads and affiliate links are said not to change tool results. The only affiliate relationship listed is Bluehost.</p>
+<p>Ads and affiliate links do not change tool results. Our only affiliate relationship is Bluehost, and it is disclosed in the <a href="https://www.kromotools.net/p/editorial-policy.html">Editorial Policy</a>.</p>
 
 <h2 id="policies">Policies</h2>
 <ul>
@@ -151,11 +158,11 @@ footer{border-top:1px solid var(--line);padding:28px 20px;color:var(--muted);fon
 </ul>
 
 <h2 id="faq">FAQ</h2>
-<details><summary>Is Kromo Tools really free?</summary><p>Yes. The site says all tools are free with no account. Optional support and advertising pay for hosting.</p></details>
+<details><summary>Is Kromo Tools really free?</summary><p>Yes. All tools are free to use with no account. Advertising and optional support pay for hosting.</p></details>
 <details><summary>Can I trust the health calculators?</summary><p>Use them for general guidance only. They cannot diagnose anything and do not know your medical history.</p></details>
-<details><summary>Do AI tools keep my text?</summary><p>The site says it does not store it, but the backend and AI provider process it under their own policies.</p></details>
-<details><summary>Can I get a tool built for me?</summary><p>Yes, through the Custom Tool Development page. You get a quote before anything is built.</p></details>
-<details><summary>Is this guide official?</summary><p>Yes. It is published by the Kromo Tools team. The tools themselves live at kromotools.net.</p></details>
+<details><summary>Do AI tools keep my text?</summary><p>We do not store it, but our backend and the AI provider process it under their own policies. Do not enter anything private.</p></details>
+<details><summary>Can I get a tool built for me?</summary><p>Yes, through the <a href="https://www.kromotools.net/p/custom-tool-development.html">Custom Tool Development</a> page. You get a quote before anything is built.</p></details>
+<details><summary>Is this guide official?</summary><p>Yes. It is published by the Kromo Tools team and hosted on GitHub Pages. The tools themselves live at <a href="https://www.kromotools.net/">kromotools.net</a>.</p></details>
 </main>
 </div>
 <footer>© 2026 Kromo Tools. Guide last reviewed October 2026. <a href="https://www.kromotools.net/">kromotools.net</a></footer>
