@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kromo Tools Guide – Categories, Privacy, Limits & FAQ</title>
+<meta name="description" content="The official guide to Kromo Tools: what each category does, which tools run in your browser, how AI tools handle your text, usage limits, accuracy, and FAQs.">
+<link rel="canonical" href="https://YOUR-USERNAME.github.io/kromotools-guide/">
+<style>
+:root{--bg:#fff;--surface:#f5f7ff;--ink:#12142b;--muted:#585c78;--line:#dfe3f5;--brand:#4353ff;--brand-ink:#fff;--warn:#fff6e0;--warn-line:#e8c66a;color-scheme:light}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0e1020;--surface:#171a31;--ink:#eceefb;--muted:#a3a8c8;--line:#2a2e52;--brand:#8b96ff;--brand-ink:#0e1020;--warn:#2a2412;--warn-line:#6d5a1c;color-scheme:dark}}
+:root[data-theme=dark]{--bg:#0e1020;--surface:#171a31;--ink:#eceefb;--muted:#a3a8c8;--line:#2a2e52;--brand:#8b96ff;--brand-ink:#0e1020;--warn:#2a2412;--warn-line:#6d5a1c;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding-top:env(safe-area-inset-top,0px)}
+a{color:var(--brand)}a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:16px;padding:12px 20px}
+header.top b{font-size:1.05rem}header.top nav{margin-left:auto;display:flex;gap:16px;font-size:.92rem}header.top nav a{color:var(--muted);text-decoration:none}
+button.theme{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;padding:6px 10px;cursor:pointer}
+.wrap{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:240px minmax(0,1fr);gap:40px;padding:0 20px}
+aside{position:sticky;top:70px;align-self:start;max-height:calc(100vh - 90px);overflow:auto;padding:28px 0;font-size:.92rem}
+aside a{display:block;padding:5px 10px;border-left:2px solid var(--line);color:var(--muted);text-decoration:none}
+aside a:hover,aside a.on{color:var(--brand);border-left-color:var(--brand)}
+main{padding:36px 0 80px;max-width:800px}
+h1{font-size:clamp(2rem,4.5vw,2.9rem);line-height:1.15;margin:0 0 14px;letter-spacing:-.02em}
+h2{font-size:1.7rem;margin:56px 0 12px;padding-top:12px;border-top:1px solid var(--line);letter-spacing:-.01em}
+h3{font-size:1.15rem;margin:28px 0 6px}
+p,li{max-width:70ch}.lead{font-size:1.15rem;color:var(--muted)}
+.note{background:var(--warn);border:1px solid var(--warn-line);border-radius:10px;padding:12px 16px;margin:18px 0}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:24px 0}
+.facts div{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px}.facts b{display:block;font-size:1.5rem;color:var(--brand)}
+table{border-collapse:collapse;width:100%;font-size:.94rem}th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top}th{background:var(--surface)}
+.scroll{overflow-x:auto}
+.search{width:100%;padding:12px 14px;font-size:1rem;border:2px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);margin:10px 0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 16px}
+.chips button{border:1px solid var(--line);background:var(--bg);color:var(--ink);padding:6px 12px;border-radius:99px;cursor:pointer}
+.chips button[aria-pressed=true]{background:var(--brand);color:var(--brand-ink);border-color:var(--brand)}
+#grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px;padding:0;list-style:none}
+#grid a{display:block;padding:9px 12px;border:1px solid var(--line);border-radius:8px;text-decoration:none;color:var(--ink);font-size:.92rem}
+#grid a:hover{border-color:var(--brand);background:var(--surface)}#grid small{display:block;color:var(--muted)}
+#count{color:var(--muted);font-size:.9rem}
+details{border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:8px 0}summary{cursor:pointer;font-weight:600}
+code{background:var(--surface);padding:2px 6px;border-radius:5px;font-size:.9em}
+footer{border-top:1px solid var(--line);padding:28px 20px;color:var(--muted);font-size:.9rem;text-align:center}
+@media(max-width:860px){.wrap{grid-template-columns:1fr}aside{display:none}header.top nav{display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="top"><b>Kromo Tools Guide</b><nav><a href="#directory">Tool directory</a><a href="#privacy">Privacy</a><a href="#faq">FAQ</a></nav><button class="theme" id="theme" aria-label="Toggle dark mode">Theme</button></header>
+<div class="wrap">
+<aside aria-label="Contents" id="toc">
+<a href="#overview">Overview</a><a href="#start">Quick start</a><a href="#categories">Categories</a><a href="#directory">Tool directory</a><a href="#how">How tools work</a><a href="#privacy">Privacy &amp; data</a><a href="#limits">Limits &amp; accuracy</a><a href="#trouble">Troubleshooting</a><a href="#business">Advertising &amp; custom tools</a><a href="#policies">Policies</a><a href="#contact">Contact &amp; support</a><a href="#faq">FAQ</a>
+</aside>
+<main>
+<h1>Kromo Tools: a practical guide</h1>
+<p class="lead">What the site offers, how to pick the right tool, what happens to the text you enter, and where the limits are.</p>
+<div class="note"><strong>Official guide.</strong> This page is the documentation hub for <a href="https://www.kromotools.net/">Kromo Tools</a>. Prices, tool counts and policies can change, so the main website is always the final reference. Last reviewed: October 2026.</div>
+
+<h2 id="overview">Overview</h2>
+<p>Kromo Tools is a free website of browser-based utilities: calculators, converters, PDF and image tools, health estimators, time helpers and social media generators. No account or signup is required. The site is run by founder Dawood Mustafa with a small team, and is paid for by advertising and optional support.</p>
+<div class="facts"><div><b>200+</b>free tools</div><div><b>7</b>categories</div><div><b>0</b>signups needed</div><div><b>90 days</b>re-check cycle</div></div>
+<p>Most tools run entirely inside your browser. A smaller group, the AI tools, send your text to a backend and then to an outside AI provider. The difference matters for privacy, so it has its own section below.</p>
+
+<h2 id="start">Quick start</h2>
+<ol>
+<li>Open the <a href="https://www.kromotools.net/p/all-tools.html">All Tools</a> page and type a keyword such as <code>pdf</code>, <code>bmi</code> or <code>age</code>, or use the category buttons.</li>
+<li>Open the tool page. Each one explains how it works and which formula it is based on.</li>
+<li>Enter your values or choose a file. Do not enter passwords, bank details or medical records.</li>
+<li>Read the result and treat it as an estimate. For anything important, check it independently.</li>
+<li>If a result looks wrong, use <a href="https://www.kromotools.net/p/report-bug.html">Report a Bug</a>. If a tool is missing, use <a href="https://www.kromotools.net/p/request-tool.html">Request a Tool</a>.</li>
+</ol>
+
+<h2 id="categories">Categories</h2>
+<div class="scroll"><table>
+<tr><th>Category</th><th>What it covers</th><th>Good starting tools</th></tr>
+<tr><td>Math &amp; Smart Calculators</td><td>Percentages, fractions, algebra, statistics, number bases, plus money tools</td><td>Percentage, Mortgage, Matrix, eBay Fee, Amazon FBA</td></tr>
+<tr><td>Fitness &amp; Health</td><td>Body metrics, calories, macros, sleep, heart rate, workouts, pregnancy dates</td><td>BMI, TDEE, Macro, Water Intake, Sleep Cycle</td></tr>
+<tr><td>PDF &amp; Image Tools</td><td>Convert, merge, split, compress and protect PDFs; edit and convert images</td><td>Merge PDF, Compress PDF, Image Compressor, Background Remover</td></tr>
+<tr><td>Daily Utility &amp; Converters</td><td>Unit converters, text tools, developer helpers, generators, AI utilities</td><td>Word Counter, QR Code Generator, JSON Formatter, Password Generator</td></tr>
+<tr><td>Time &amp; Productivity</td><td>Date maths, countdowns, time zones, work hours, focus timers</td><td>Age Calculator, Days Between Dates, Pomodoro Timer</td></tr>
+<tr><td>Social Media Tools</td><td>Captions, hashtags, bios, usernames, channel helpers</td><td>Hashtag Generator, Caption Generator, YouTube Channel Audit</td></tr>
+<tr><td>Education &amp; Exam</td><td>GPA and CGPA, exam countdowns, study timers</td><td>GPA Calculator, CGPA Calculator, Study Time Tracker</td></tr>
+</table></div>
+
+<h2 id="directory">Searchable tool directory</h2>
+<p>Every tool listed on the All Tools page as of October 2026. Each link opens the tool on kromotools.net.</p>
+<input class="search" id="q" type="search" placeholder="Search tools, e.g. pdf, calorie, qr" aria-label="Search tools">
+<div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
+<div id="count" aria-live="polite"></div>
+<ul id="grid"></ul>
+
+<h2 id="how">How the tools work</h2>
+<h3>Browser-based tools</h3>
+<p>Calculators, converters and most text, image and PDF tools run on your own device. According to the site, the content is not sent to its servers, and it disappears when you close or refresh the page.</p>
+<h3>AI-powered tools</h3>
+<p>Tools such as the AI Text Humanizer, AI Chatbot Builder or Grammar Checker may use an AI service. The site says your text goes to its Vercel-hosted backend and on to an outside AI provider, and that it does not store the text itself. Vercel and the provider handle it under their own policies.</p>
+<h3>Usage limits</h3>
+<p>Some AI tools are rate-limited. To do this, the backend reads your IP address and keeps a short-lived counter with Upstash. The terms forbid bypassing limits, for example by rotating IP addresses or using automated requests.</p>
+
+<h2 id="privacy">Privacy and data summary</h2>
+<div class="scroll"><table>
+<tr><th>Question</th><th>Answer from the site's policies</th></tr>
+<tr><td>Account needed?</td><td>No.</td></tr>
+<tr><td>Are inputs stored?</td><td>The site says no. AI tool text passes through third parties.</td></tr>
+<tr><td>Data collected automatically</td><td>IP address, browser, device, pages visited, time on page, referrer.</td></tr>
+<tr><td>Third parties</td><td>Blogger (Google), Google Analytics, Google AdSense, Vercel, Upstash, FormSubmit for contact forms, AI providers.</td></tr>
+<tr><td>Cookies</td><td>Platform, analytics and advertising cookies. Your banner choice is kept in browser storage.</td></tr>
+<tr><td>Sold?</td><td>Not sold for money. Advertising cookies may count as "sharing" under some laws, and you can opt out in Google Ads Settings.</td></tr>
+<tr><td>Children</td><td>Not directed at under-13s.</td></tr>
+<tr><td>Your rights</td><td>Access, correction, deletion and objection under GDPR or CCPA. Email support@kromotools.net.</td></tr>
+</table></div>
+<p>Safe habit: never enter passwords, ID numbers, financial account numbers or health records into any online tool.</p>
+
+<h2 id="limits">Limits and accuracy</h2>
+<ul>
+<li><strong>Estimates only.</strong> Health, nutrition and finance tools give general estimates. They are not medical, legal, tax or financial advice.</li>
+<li><strong>How formulas are checked.</strong> The site says it uses published sources such as WHO guidance, tests against manual calculations, and re-checks each tool every 90 days.</li>
+<li><strong>AI output.</strong> It can be wrong, outdated or similar to other users' results. Edit before use and follow school, employer or platform rules about AI-assisted work.</li>
+<li><strong>Rounding and standards.</strong> Different countries and formulas can give slightly different answers.</li>
+<li><strong>Availability.</strong> Tools are "as is" and may change, pause or be removed.</li>
+</ul>
+
+<h2 id="trouble">Troubleshooting</h2>
+<details><summary>A tool does not load or the button does nothing</summary><p>Refresh the page, clear your cache, and try another browser. Disable extensions that block scripts for this site.</p></details>
+<details><summary>An AI tool says the limit is reached</summary><p>Fair-use limits apply per IP address and time period. Wait and try again later. The limits can change at any time.</p></details>
+<details><summary>A calculator result looks wrong</summary><p>Check units and rounding first. If it still looks wrong, send the tool name, your inputs, the result and the result you expected through Report a Bug. A screenshot helps, but hide personal details.</p></details>
+<details><summary>A large PDF or image is slow</summary><p>Browser tools use your device's memory. Close other tabs, or split the file first.</p></details>
+
+<h2 id="business">Advertising and custom tools</h2>
+<div class="scroll"><table>
+<tr><th>Offer</th><th>Starting price (as listed)</th><th>Notes</th></tr>
+<tr><td>Starter banner</td><td>$49 / month</td><td>Sidebar banner on up to 3 tool pages</td></tr>
+<tr><td>Growth</td><td>$149 / month</td><td>Header and sidebar banners, 1 sponsored listing</td></tr>
+<tr><td>Sponsored article</td><td>$199 one-time</td><td>Labelled as sponsored, 2 revision rounds</td></tr>
+<tr><td>Custom standard tool</td><td>from $29 one-time</td><td>You own the files; 30 days of fixes</td></tr>
+<tr><td>Custom API-powered tool</td><td>from $49 + API</td><td>Hosted plan from $49/month, or bring your own API key</td></tr>
+</table></div>
+<p>Ads and affiliate links are said not to change tool results. The only affiliate relationship listed is Bluehost.</p>
+
+<h2 id="policies">Policies</h2>
+<ul>
+<li><a href="https://www.kromotools.net/p/privacy-policy.html">Privacy Policy</a></li><li><a href="https://www.kromotools.net/p/term-service.html">Terms &amp; Service</a> (governed by the laws of Pakistan)</li><li><a href="https://www.kromotools.net/p/cookie-policy.html">Cookie Policy</a></li><li><a href="https://www.kromotools.net/p/disclaimer.html">Disclaimer</a></li><li><a href="https://www.kromotools.net/p/dmca-policy.html">DMCA Policy</a></li><li><a href="https://www.kromotools.net/p/trust-security.html">Trust &amp; Security</a></li><li><a href="https://www.kromotools.net/p/editorial-policy.html">Editorial Policy</a></li>
+</ul>
+
+<h2 id="contact">Contact and support</h2>
+<ul>
+<li>General and privacy requests: support@kromotools.net (replies usually within 24 hours, Monday to Saturday).</li>
+<li>Business, advertising, press and custom tools: partnerships@kromotools.net.</li>
+<li>Support is email only. There is no live chat or phone line.</li>
+<li>Pages: <a href="https://www.kromotools.net/p/help-center.html">Help Center</a>, <a href="https://www.kromotools.net/p/request-tool.html">Request a Tool</a>, <a href="https://www.kromotools.net/p/report-bug.html">Report a Bug</a>, <a href="https://www.kromotools.net/p/about-us.html">About</a>.</li>
+</ul>
+
+<h2 id="faq">FAQ</h2>
+<details><summary>Is Kromo Tools really free?</summary><p>Yes. The site says all tools are free with no account. Optional support and advertising pay for hosting.</p></details>
+<details><summary>Can I trust the health calculators?</summary><p>Use them for general guidance only. They cannot diagnose anything and do not know your medical history.</p></details>
+<details><summary>Do AI tools keep my text?</summary><p>The site says it does not store it, but the backend and AI provider process it under their own policies.</p></details>
+<details><summary>Can I get a tool built for me?</summary><p>Yes, through the Custom Tool Development page. You get a quote before anything is built.</p></details>
+<details><summary>Is this guide official?</summary><p>Yes. It is published by the Kromo Tools team. The tools themselves live at kromotools.net.</p></details>
+</main>
+</div>
+<footer>© 2026 Kromo Tools. Guide last reviewed October 2026. <a href="https://www.kromotools.net/">kromotools.net</a></footer>
+<script>
+const D={"Math & Smart Calculators":["Absolute Value Calculator","Algebra Solver","Amazon FBA Calculator","Antilog Calculator","Average Calculator","Binary Calculator","Crypto Profit Calculator","Cube Root Calculator","Decimal to Fraction Calculator","eBay Fee Calculator","Equation Solver","Exponent Calculator","Factorial Calculator","Fraction Calculator","GCF Calculator","Hex Converter","LCM Calculator","Log Calculator","Long Division Calculator","Matrix Calculator","Mean Median Mode Calculator","Modulo Calculator","Mortgage Calculator","Number Base Converter","Percentage Calculator","Prime Number Checker","Random Number Generator","Ratio Calculator","Roman Numeral Converter","Scientific Calculator","Scientific Notation Calculator","Significant Figures Calculator","Square Root Calculator","Standard Deviation Calculator"],
+"Fitness & Health":["Army Body Fat Calculator","Blood Pressure Checker","BMI Calculator","BMR Calculator","Body Fat Calculator","Body Roundness Index Calculator","Body Shape Calculator","Bulking Calculator","Burned Calories Calculator","Caffeine Intake Calculator","Calorie Calculator","Carbohydrate Calculator","Cutting Calculator","Due Date Calculator","Fasting Window Calculator","FFMI Calculator","Fiber Intake Calculator","Fitness Age Calculator","Goal Weight Calculator","Heart Rate Calculator","Heart Rate Zones Calculator","Hydration by Climate Calculator","Ideal Weight Calculator","Intermittent Fasting Calculator","Keto Macro Calculator","Lean Body Mass Calculator","Live Step Counter","Macro Calculator","Metabolic Age Calculator","One Rep Max Calculator","Ovulation Calculator","Pace Calculator","Pregnancy Calculator","Protein Intake Calculator","Protein per Meal Calculator","Recomp Calculator","Running Race Predictor Calculator","Sleep Calculator","Sleep Cycle Calculator","Steps to Calories Calculator","Sugar Intake Calculator","Target Weight Planner Calculator","TDEE Calculator","Training Load Calculator","VO2 Max Calculator","Waist to Hip Ratio Calculator","Walking Calories Calculator","Water Intake Calculator","Weight Loss Timeline Calculator","Workout Volume Calculator"],
+"PDF & Image Tools":["Background Remover","Blur Image Tool","Compress PDF","Crop Image Tool","GIF Maker","HEIC to JPG Converter","Image Color Picker","Image Compressor","Image Editor","Image EXIF Metadata Viewer","Image to Base64 Converter","Image to Text","Image Watermark Adder","JPG to PDF","JPG to PNG Converter","JPG to WEBP Converter","Meme Generator","Merge PDF","Passport Size Photo Maker","PDF Metadata Editor","PDF Page Number Adder","PDF Page Reorder Tool","PDF to Excel / Excel to PDF","PDF to JPG","PDF to PNG","PDF to Word","PDF Toolkit Studio","Photo Collage Maker","PNG to JPG Converter","PNG to PDF","Protect PDF","Resize Image Tool","Rotate Image Tool","Rotate PDF","Split PDF","SVG to PNG Converter","Unlock PDF","WEBP to JPG Converter","Word to PDF"],
+"Daily Utility & Converters":["AI Chatbot Builder","AI Text Humanizer","Area Converter","Barcode Generator","Base64 Encoder Decoder","Case Converter","Character Counter","Color Code Converter","Compare AI Tools","CSS Minifier","Data Storage Converter","Data Visualizer","Developer Console","DNS Leak Test","Domain Age Checker","Grammar Checker","HTML Minifier","Invoice Generator","JSON Formatter","Length Converter","My IP Address Checker","Page Speed Checker","Password Generator","QR Code Generator","Random Name Picker","Resume and CV Builder Studio","Speed Converter","Temperature Converter","Text Repeater","Text to Speech","Translator","Typing Speed Test","Unit Converter","URL Encoder Decoder","UUID Generator","Video to MP3","Volume Converter","Weight Converter","Word Counter"],
+"Time & Productivity":["Age Calculator","Birthday Countdown","Business Days Calculator","Countdown Timer","Daily Habit Tracker","Date Difference Calculator","Days Between Dates","Days Until Calculator","Focus Timer","Hours Between Times Calculator","Leap Year Checker","Meeting Planner","Minutes Calculator","Next Holiday Calculator","Overtime Calculator","Pomodoro Timer","Shift Calculator","Time Addition Calculator","Time Duration Calculator","Time Subtraction Calculator","Time Zone Converter","Week Number Calculator","Work Hours Calculator"],
+"Social Media Tools":["Avatar Generator","Caption Generator","Channel Statistics Checker","Emoji Kitchen","Gaming Name Generator","Hashtag Generator","Instagram Bio Generator","Nickname Generator","Pixel Avatar Generator","Sticker Generator","TikTok Caption Generator","Trending Hashtag Finder","Username Generator","Video Ideas Generator","Viral Hook Generator","YouTube Channel Audit"],
+"Education & Exam":["CGPA Calculator","Exam Countdown","GPA Calculator","School Days Calculator","Study Time Tracker"]};
+const slug=n=>n.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+const all=[];for(const c in D)D[c].forEach(n=>all.push({n,c,u:"https://www.kromotools.net/p/"+slug(n)+".html"}));
+let cat="All";const q=document.getElementById("q"),g=document.getElementById("grid"),ch=document.getElementById("chips"),ct=document.getElementById("count");
+["All",...Object.keys(D)].forEach(c=>{const b=document.createElement("button");b.textContent=c;b.setAttribute("aria-pressed",c==="All");b.onclick=()=>{cat=c;[...ch.children].forEach(x=>x.setAttribute("aria-pressed",x===b));render()};ch.appendChild(b)});
+function render(){const t=q.value.trim().toLowerCase();const r=all.filter(x=>(cat==="All"||x.c===cat)&&x.n.toLowerCase().includes(t));g.innerHTML="";r.forEach(x=>{const li=document.createElement("li"),a=document.createElement("a");a.href=x.u;a.target="_blank";a.rel="noopener";a.innerHTML=x.n+"<small>"+x.c+"</small>";li.appendChild(a);g.appendChild(li)});ct.textContent=r.length+" of "+all.length+" tools"}
+q.addEventListener("input",render);render();
+const root=document.documentElement,tb=document.getElementById("theme");
+try{const s=localStorage.getItem("theme");if(s)root.dataset.theme=s}catch(e){}
+tb.onclick=()=>{const dark=getComputedStyle(root).colorScheme==="dark";const n=dark?"light":"dark";root.dataset.theme=n;try{localStorage.setItem("theme",n)}catch(e){}};
+const links=[...document.querySelectorAll("#toc a")];const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle("on",l.getAttribute("href")==="#"+e.target.id))}}),{rootMargin:"-30% 0px -65% 0px"});
+document.querySelectorAll("main h2").forEach(h=>io.observe(h));
+</script>
+</body>
+</html>
